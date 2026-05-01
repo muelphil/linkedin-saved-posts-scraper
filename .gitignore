@@ -19,7 +19,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 .DS_Store
-*/dist
 
 PLAN.md
 prompts.md
@@ -105,7 +104,5 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
-
-dist
 
 .github
