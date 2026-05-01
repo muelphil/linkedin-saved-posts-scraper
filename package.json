@@ -7,7 +7,7 @@
     "linkedin-scraper": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc && node -e \"require('fs').copyFileSync('src/enrichment/default_system_prompt.md','dist/enrichment/default_system_prompt.md')\"",
+    "build": "tsc && node scripts/copy-assets.js",
     "start": "ts-node src/cli.ts scrape",
     "scrape": "ts-node src/cli.ts scrape",
     "auth": "ts-node src/cli.ts auth",
