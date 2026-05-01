@@ -1,0 +1,27 @@
+---
+title: "{{#if enrichment}}{{enrichment.title}}{{else}}{{postId}}{{/if}}"
+source: "{{postUrl}}"
+author: "{{author.name}}"
+author_url: "{{author.url}}"
+post_id: "{{postId}}"
+timestamp: {{timestamp.absolute}}
+tags:
+  - "#linkedin"
+{{#if enrichment}}
+{{#each enrichment.tags}}
+  - "{{this}}"
+{{/each}}
+{{/if}}
+image: "{{mediaFilename}}"
+{{#if enrichment.summary}}
+summary: "{{enrichment.summary}}"
+{{/if}}
+---
+{{#if enrichment.summary}}
+> [!summary]
+> {{enrichment.summary}}
+{{/if}}
+
+![[{{mediaFilename}}]]
+
+{{content}}
