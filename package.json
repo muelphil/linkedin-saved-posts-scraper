@@ -16,7 +16,7 @@
     "dev": "ts-node src/cli.ts",
     "test:parser": "ts-node -e \"const fs=require('fs');const{parsePostsFromHtml}=require('./src/parser/postParser');const html=fs.readFileSync('./references/posts-full.html','utf-8');const posts=parsePostsFromHtml(html);console.log('Posts:',posts.length);if(posts.length!==10){process.exit(1);}\"",
     "test:markdown": "ts-node test/markdownParser.test.ts",
-    "prepare": "npm run build"
+    "prepack": "npm run build"
   },
   "keywords": [
     "linkedin",
